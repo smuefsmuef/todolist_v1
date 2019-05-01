@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Shopping List</title>
+
+  <!-- CSS -->
+  <link href="css/styles.css" rel="stylesheet">
+<!-- Fonts -->
+ <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="box" id="heading">
+    <h1>
+      <%= today %>
+    </h1>
+  </div>
+
+  <div class="box">
+    <!-- new Items -->
+    <%  for(var i = 0; i < newListItems.length; i++){ %>
+    <div class="item">
+      <input type="checkbox">
+      <p>
+        <%= newListItems[i] %>
+      </p>
+    </div>
+      <% } %>
+
+      <form class="item" action="/" method="POST">
+        <input type="text" name="item" placeholder="Add New Item" autocomplete="off">
+        <button type="submt" name="button">+</button>
+      </form>
+
+  </div>
+
+
+
+
+</body>
+
+</html>
